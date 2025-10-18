@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mercadie's Christmas List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+
+  <!-- HEADER -->
+  
+  <header>
+    <h1 class="page-title">Mercadie's Christmas List</h1>
+    <div class="top-controls">
+      <input type="text" id="searchBar" placeholder="Search for presents...">
+      <select id="filterSelect">
+        <option value="all">All Categories</option>
+        <option value="misc">Misc Items</option>
+        <option value="expensive">Expensive Items</option>
+        <option value="electronics">Electronics</option>
+        <option value="books">Books</option>
+        <option value="clothes">Clothes</option>
+        <option value="food">Food</option>
+      </select>
+      <select id="priceFilter">
+        <option value="all">All Prices</option>
+        <option value="under25">Under $25</option>
+        <option value="25plus">$25 and above</option>
+      </select>
+      <button id="helpBtn">Help 🎁</button>
+      <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+    </div>
+    
+  </header>
+  
+
+  <!-- SLIDESHOW -->
+  <div class="most-wanted">
+  Most Wanted Presents 🎅
+</div>
+
+  <section class="slideshow">
+    
+    <div class="slides">
+<div class="slide active">
+  <img src="https://daydrianharding.com/cdn/shop/files/DH-THANKUJESUS-BLACK-TEE-FRONT.png?v=1750445155" alt="Most Wanted 1">
+  
+  <!-- NEW BUTTONS -->
+  <button class="slide-view-btn" data-link="https://daydrianharding.com/products/thank-you-jesus-black-tee">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+<div class="slide">
+  <img src="https://hgasupply.com/cdn/shop/files/hga-grave-robber-tee-403161.png?format=jpg&v=1744936619&width=1800" alt="Most Wanted 2">
+  
+  <button class="slide-view-btn" data-link="https://hgasupply.com/products/hga-grave-robber-tee?pr_prod_strat=e5_desc&pr_rec_id=5f4bde83e&pr_rec_pid=8469021327514&pr_ref_pid=8375577084058&pr_seq=uniform">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+<div class="slide">
+  <img src="https://m.media-amazon.com/images/I/71CZ9PE2gSL._AC_SL1500_.jpg" alt="Most Wanted 2">
+
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/MINICAGIE-Vintage-Journaling-Notebook-Journals/dp/B0DF745S1Y/ref=sr_1_8?crid=3B12S8HB4MIMS&dib=eyJ2IjoiMSJ9.IRyzcL_CNQIwzAVZ4-f6e0aAsD3RY41Scj6Za9pNHAWX_DQn_CZQPi3KKaHVVTy3bvS4V7fSfDL_ji9RG9cknweJc2w9I6ho7-h6n3-_LqCooByz5pq2M_jiKvilX20x05YD8WBuIg-i-Mk6bjj2XxroRuvKuSsluxugFG9tRL0UlWKUbDNXF2vvTWxXR5Vg7v0wucj0jkc4zu261EIt_2ESjJ4w3mgTAvuCrQlz7R6pMpK6vv9S7142SNWJlpiG-PzbPp3fT7MZrFSjtQIJqADhuahMHdGJbEQ5X3qoIeA.KBeG9tTmX7HoeEAsEE0f8t94pudaMOJcUkep4sRRhts&dib_tag=se&keywords=black%2Bleather%2Bjournal&qid=1760818933&sprefix=black%2Bleather%2Bjournal%2B%2Caps%2C102&sr=8-8&th=1">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+
+<div class="slide">
+  <img src="https://daydrianharding.com/cdn/shop/files/vday-hoodie-front.png?v=1737502858" alt="Most Wanted 2">
+  
+  <button class="slide-view-btn" data-link="https://daydrianharding.com/products/candy-hearts-hoodie?variant=50964190429397">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+<div class="slide">
+  <img src="https://shop.overtime.tv/cdn/shop/files/RWE_001_1440x.jpg?v=1743018314" alt="Most Wanted 2">
+
+  
+  <button class="slide-view-btn" data-link="https://shop.overtime.tv/products/rwe-on-top-shorts-black?variant=44416426246305">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+
+<div class="slide">
+  <img src="https://shop.overtime.tv/cdn/shop/files/REAPERS_018_1440x.jpg?v=1743017173" alt="Most Wanted 2">
+  
+  <button class="slide-view-btn" data-link="https://shop.overtime.tv/products/city-reapers-feature-mesh-shorts-red?variant=44416427786401">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+<div class="slide">
+  <img src="https://m.media-amazon.com/images/I/61VAEz2avlL._AC_SL1500_.jpg" alt="Most Wanted 2">
+
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/Photocard-Collector-Pockets-Pendant-Collection/dp/B0B6SVZTPD/ref=sr_1_26?crid=2V3YT6COYHY3O&dib=eyJ2IjoiMSJ9.f-PGghVzuO1jySD4Jsi0rlZnjClEfwy_W9M-gyUUQkcNGHvqcuAUD8RSreHlqtI24pengV3Jlp6-fElh7Lzgbk7eY7-9h8TpAvOv4IoAJ0ehSmWJT0PimKPf8UFnSOS0I5j9-6ThWvrS4rnUNjBfwcDAM2tSU1CDcRRtUUNacZnS4Yo2hyQ0VNHmxeyM8DCeibeYvJdqKRY5wvrik-fyUZbfe4RUg6vky8eElPjJemITL-4NcOMGM56AttCefSulm3YMfeh6dywwG2xEtz4BTnBwfBYJrbQXvPcFf-0_3i4.hYltWjWR6n3IWkEAJL2yE5wPdyhWgrbQwkA2saZ2-nA&dib_tag=se&keywords=kpop%2Bpc%2Bfolder&qid=1760818781&sprefix=kpop%2Bpc%2Bfolder%2Caps%2C98&sr=8-26&th=1">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+
+<div class="slide">
+  <img src="https://daydrianharding.com/cdn/shop/products/16753219-8BF5-4A7B-9F6B-A2FDBD646D3E.png?v=1705983629" alt="Most Wanted 3">
+  
+  <button class="slide-view-btn" data-link="https://daydrianharding.com/products/stay-sober-wristbands">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+<div class="slide">
+  <img src="https://m.media-amazon.com/images/I/71BmRNeC9mL._AC_SL1500_.jpg" alt="Most Wanted 3">
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/AKAI-PROFESSIONAL-MPK-Mini-MK3/dp/B0886KWVYR/ref=sr_1_3?crid=1N1UN5I1T5BUS&dib=eyJ2IjoiMSJ9.244a90vvevo3CukYLCFAH60g_Lays2vRzJPbtSLozAfUe-YFuBWbQy6B8jFt9M9BYvE3i9mTJJZO6phTqPwWz2mXHrNwn8L0ydy26EIWveIeu15hUbjQLon2dgHVlEBebzaJx1QIOyIdAHhDYWvBkhZEDf5eMX_KtbXNXw4XDXR-SjZIeqIng7B2XOVKn7ItFclYc1lCfsRibzcyvy2wTLyqnjPvL_MvX78kXnGjhMtYtke9l-DE1zKtncrQKUuGm4_TZp9zqxeCQ4LZ6t19i9fAdhegaM0V5_M9jI_NQ8g.TtPkT_2bQNOA4TyzuQhdVRbLuirNfEtRh_WvoHIfSik&dib_tag=se&keywords=akai%2Bmpk%2Bmini&qid=1760229894&sprefix=akai%2B%2Caps%2C98&sr=8-3&th=1">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div><div class="slide">
+  <img src="https://m.media-amazon.com/images/I/81oe32sxzQL._SL1500_.jpg" alt="Most Wanted 3">
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/P1Harmony-Postcard-Ticket-Selfie-Photocards/dp/B0DHRX2NC4/ref=sr_1_2?crid=1KTIFI7GE6FC1&dib=eyJ2IjoiMSJ9.AHycrh7VmCtlgQp9xGVsYT4DZ2-QJcufsXAF5FP_7GkKvG8tybWH8mWfL3D_bJjE416e0c3Tr6yieuvgWaMw2-y6VMgyhmV7n35gwH0uGOK46u4g2B5AHBfczLlzgqGEIrVasL9Nkb6NOZBiISGcSOidvdEzTwwN72TDols19DMn-59j6ko8CQBtbUTVyvuw.mauTrx3o1rTikp09evnRJWNikCmRqHeOFYPuR1Z0L4c&dib_tag=se&keywords=p1harmony+sad+s+ver&qid=1760226148&sprefix=p1harmony+sad+s+ver%2Caps%2C73&sr=8-2">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div><div class="slide">
+  <img src="https://m.media-amazon.com/images/I/81D3vlj2gSL._AC_SL1500_.jpg" alt="Most Wanted 3">
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/Glock-177-Caliber-Steel-Pistol/dp/B07FT2LLLK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.nGAMxXzkiKAJ8i-NyhtpOMMWf0Qiq6DKuK80lhymCFUPSFcWUTsuTQEIoVGX0ZYsnjeW39B8VWInILEMgfHRFmpoJtlcQOqEQQ8qzQh1rCk35xhFqpQtxBQYrdzuciGUeDTc03foWQhQJ25id95fLNOOYkyfW5D8KMFmFQiGNMCbC3zq_tU7NdDEtrnIfQcu4TAdJrP34iyqew94kXTrtOYPKE-QS4Fv9Egt9CipESzCxZJXaKVJgyvhIRIu9fTdTnkGPDPcCKne7-PwlslYSF-yJPlUjTHobskye27w1Is.pgJI66tEQZW8AcJC_wWfOL63j87Rb5n1d_NyXaExL5I&dib_tag=se&keywords=pistol+bb+gun&qid=1760819287&sr=8-1#averageCustomerReviewsAnchor">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div><div class="slide">
+  <img src="https://m.media-amazon.com/images/I/71eHl4i9erL._AC_SL1500_.jpg" alt="Most Wanted 3">
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/GTRACING-Ergonomic-Computer-Headrest-360%C2%B0-Swivel/dp/B0FK4PWJVH/ref=sr_1_9?crid=IXEZ723GARFV&dib=eyJ2IjoiMSJ9.y3X1W72Hc8JMgY999tZdomZN1XbKrgSMmbBXs8oqvJso__FtddYdmmMkdLHG8b7K0u0DB2VuwU0jd2BEhIc6XFj-mpynuhPzfzlmUvS2U6AZI4TG53wl97YJnx4VCdWKq8l9NhYLH-DRU8_E2jww5Z7kU6j7_8cCpJ0GeGzS-X04o-IAlqoVOw96b01U0j46p6-OmCyxBCch6kEh91g3NQUEE3Cc5hRrRWCq3C4gL5lM8lIZwf97to5qeDtgJFNLbAsOlIqC8_B_N6V_QEO_hWzw_mjKKVDtiWf-tI1MoNE.jV65p_WIDNHJjCUzp29MchzDRHqyHWb2WPJIFDG7Zq4&dib_tag=se&keywords=gtracing%2Bchair&qid=1760228068&sprefix=gtracing%2Bchair%2Caps%2C104&sr=8-9&th=1">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div><div class="slide">
+  <img src="https://m.media-amazon.com/images/I/61lxq0ibU9L._AC_SL1500_.jpg" alt="Most Wanted 3">
+  
+  <button class="slide-view-btn" data-link="https://www.amazon.com/Plushies-Stuffed-Meeting-Sunglasses-Removable/dp/B0FKG1FDCL/ref=sr_1_16_sspa?crid=25DHDT7Z29YHT&dib=eyJ2IjoiMSJ9.DEdzB3BohhH0tDmfTuOnx1_mm11vvpntRNjnZvxzOEmSK5oDQdViXmHdxKK5iOQEO8Gzs-_7iCimuJnKUKg3cU7YCfV6EcWaFb3JpTmqM7fm6YXujO6Aenn_f2ocNUaIwpGHFa-N5SUcwFVt66xd_M50A3EVwYEmhwqk5BGqQTImEcQgYNwJkhVCbtDT-wi1gb9akI7ex8WiovMIbvpR8LixhJ2ETQvgxgEDJPzKlnD9K-xPGp2GZhaLQXZVpNZaEx2zQFSVGF7IAvxUW4Ld150N6auMdmn6JlDfxggJPLE.Rkpn8EuiMrNdCUcWB-raSbbLbKlZPy1OEgYTeBkzpP8&dib_tag=se&keywords=wolfchan&qid=1760226943&sprefix=wolfchan%2Caps%2C95&sr=8-16-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1">View Item</button>
+  <button class="slide-add-cart">Add to Cart</button>
+</div>
+
+
+
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </section>
+  <!-- DIVIDER -->
+<div class="divider">
+  <span>Gifts</span>
+</div>
+
+  <!-- PRODUCT GRID -->
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/81U29VFTmHL._AC_SL1500_.jpg">
+      <h3>skz s-class [b ver]</h3>
+      <p class="price">$21.55</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Photobook-Photocard-Tracking-Standard-Version/dp/B0C3V785QS/ref=sr_1_1?crid=3SCYXRE768BL8&dib=eyJ2IjoiMSJ9.RuVqpsOZtgJyUKoACfa03QhiVWbCMI478kPROA9NhSzohB2aPwXImP4wFJtaX4G6Zf4kZ_yxhkyVpzWN6dgdGLc8YQjBcslEuXLn6tuHi4YFESye_kwlY7AyyxdzgVJpYyJdmhaFvATN_mjDzxPtcvmEZNP-mw5q__nhtwV30YVMDq2zTuIvlB3UPxqQGSg-Bv2LEiYE1B1MyIn_emnops6KBfg-Rm_lO5bbJlChzL309tz8UdR4RDgPK0fuRsWq5WBXE-ogNTy5t1spKd-8rIyopoeltmrZMLquDlfb2YI.GoJxUy5LA-WlnnzJwqvfStZdjr9Rn6k5lEjpm1WGtzg&dib_tag=se&keywords=stray%2Bkids%2Bs%2Bclass%2Bb%2Bver&qid=1760152422&sprefix=stray%2Bkids%2Bs%2Bclass%2Bb%2Bver%2Caps%2C62&sr=8-1&th=1">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    <!-- Product 2 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/71dUrEdar8L._AC_SL1500_.jpg" alt="Wireless Headphones">
+      <h3>skz rock-star roll ver</h3>
+      <p class="price">$16.80</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Stray-Album-%EF%A5%9C-ROCK-STRAYKIDS-Photocards/dp/B0CMZ9KH91/ref=sr_1_2?crid=27Z8AZZ4X5JNY&dib=eyJ2IjoiMSJ9.wKN71GSU-PdCRBUp9RI9ZWS0-5F3V9RLXAabPgcDEMe4idAH645PgHUwz0K-L6Z_L_ijzJErzq54Z_ioEL-xQoz_4qLcey60FwtpCsgYLTx9Com9DQV9nUTsgN3l2FjCEF6Bj_izjps0LJKihcXBbxAmiiJfRubgp4cbikjEb_bj_qqtwlHbE3iTGmNUJLgFKux0dny_9oJ0zeeYak6ThUMEjPuMyfFQX5tNhNO1Jsd1GX3zFwvv2AEADsw2RFOF0OKnLWZe8gBXzSI3Of9V9WOPXg_1xv9375aVm7XRVQs.clwhVmzl9GrK404BL9ShKAzrlrt36BeQ3cuB9gKlTUc&dib_tag=se&keywords=stray+kids+rockstar+roll+ver&qid=1760152564&sprefix=stray+kids+rockstar+roll+ver%2Caps%2C78&sr=8-2">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    <!-- Product 3 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/81oe32sxzQL._SX425_.jpg" alt="Smart Watch">
+      <h3>P1h Sad Song [s ver.]</h3>
+      <p class="price">$23.99</p>
+      <button class="view-btn" data-link="https://www.amazon.com/P1Harmony-Postcard-Ticket-Selfie-Photocards/dp/B0DHRX2NC4/ref=sr_1_2?crid=1KTIFI7GE6FC1&dib=eyJ2IjoiMSJ9.AHycrh7VmCtlgQp9xGVsYT4DZ2-QJcufsXAF5FP_7GkKvG8tybWH8mWfL3D_bJjE416e0c3Tr6yieuvgWaMw2-y6VMgyhmV7n35gwH0uGOK46u4g2B5AHBfczLlzgqGEIrVasL9Nkb6NOZBiISGcSOidvdEzTwwN72TDols19DMn-59j6ko8CQBtbUTVyvuw.mauTrx3o1rTikp09evnRJWNikCmRqHeOFYPuR1Z0L4c&dib_tag=se&keywords=p1harmony+sad+s+ver&qid=1760226148&sprefix=p1harmony+sad+s+ver%2Caps%2C73&sr=8-2">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+  <!-- Product 5 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/417--3gRA5L._AC_SL1000_.jpg" alt="Designer Wallet">
+      <h3>Stray Kids Karma [Ceremony ver.]</h3>
+      <p class="price">$26.93</p>
+      <button class="view-btn" data-link="https://www.amazon.com/STRAY-KARMA-CEREMONY-Pre-Order-Photocards/dp/B0FNJSR1SK/ref=pd_sbs_d_sccl_2_2/141-2292593-2847413?pd_rd_w=PFUOC&content-id=amzn1.sym.2cd14f8d-eb5c-4042-b934-4a05eafd2874&pf_rd_p=2cd14f8d-eb5c-4042-b934-4a05eafd2874&pf_rd_r=DRA99V6S7PFNXTF8E96N&pd_rd_wg=BM3CE&pd_rd_r=33358ad4-263f-4dec-b80f-7f21077bd137&pd_rd_i=B0FNJSR1SK&psc=1">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    <!-- Product 4 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/51yfQfBRmML._AC_SL1200_.jpg" alt="Mug Set">
+      <h3>Leebit Skzoo</h3>
+      <p class="price">$8.99</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Qaedtls-Stray-Skzoo-Adults-Leebit/dp/B0BCQSXRYW/ref=sr_1_1?crid=383L3QHBY87H1&dib=eyJ2IjoiMSJ9.cyMDOmdtxOJ-8GPzHX16957EhmDPmfS0vI6JlCpordM9gqvPYmac-rdSuPcXVxpuIX0QYo_QO9dnRE5nrZOVXc5GTO5k_QAWYgxtCsiLJRxBeA3Vr2FippLIpys4vZW4i9tzzdxxSHoORfnssz8huQRKdPNRkjp17ywS3ludo9OQHXXP1HJYRCvByqCZ8na4qpHGgksrg6brZVr3yn_ykTyaS_87-U5aMzAr3_LfxK0Qop9k0QyCCRXgmwyqfaxcibeh53pINf44UJmmR1n2wgAlxUYNP7H3O3ur2PN2klo.sjvdHQmVvyjmPqHRWgML88Q2rPhpTQMsI4KTrOzqAb4&dib_tag=se&keywords=skzoo%2Bleebit&qid=1760226252&sprefix=skzoo%2Bleebit%2Caps%2C92&sr=8-1&th=1">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    <!-- Product 5 -->
+    <div class="product" data-category="expensive">
+      <img src="https://m.media-amazon.com/images/I/81D3vlj2gSL._AC_SL1500_.jpg" alt="Designer Wallet">
+      <h3>BB Gun Pistol</h3>
+      <p class="price">$66.99</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Glock-177-Caliber-Steel-Pistol/dp/B07FT2LLLK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.nGAMxXzkiKAJ8i-NyhtpOMMWf0Qiq6DKuK80lhymCFUPSFcWUTsuTQEIoVGX0ZYsnjeW39B8VWInILEMgfHRFmpoJtlcQOqEQQ8qzQh1rCk35xhFqpQtxBQYrdzuciGUeDTc03foWQhQJ25id95fLNOOYkyfW5D8KMFmFQiGNMCbC3zq_tU7NdDEtrnIfQcu4TAdJrP34iyqew94kXTrtOYPKE-QS4Fv9Egt9CipESzCxZJXaKVJgyvhIRIu9fTdTnkGPDPcCKne7-PwlslYSF-yJPlUjTHobskye27w1Is.pgJI66tEQZW8AcJC_wWfOL63j87Rb5n1d_NyXaExL5I&dib_tag=se&keywords=pistol+bb+gun&qid=1760819287&sr=8-1#averageCustomerReviewsAnchor">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/61lxq0ibU9L._AC_SL1500_.jpg" alt="Bluetooth Speaker">
+      <h3>Skzoo Wolfchan 12cm</h3>
+      <p class="price">$12.98</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Plushies-Stuffed-Meeting-Sunglasses-Removable/dp/B0FKG1FDCL/ref=sr_1_16_sspa?crid=25DHDT7Z29YHT&dib=eyJ2IjoiMSJ9.DEdzB3BohhH0tDmfTuOnx1_mm11vvpntRNjnZvxzOEmSK5oDQdViXmHdxKK5iOQEO8Gzs-_7iCimuJnKUKg3cU7YCfV6EcWaFb3JpTmqM7fm6YXujO6Aenn_f2ocNUaIwpGHFa-N5SUcwFVt66xd_M50A3EVwYEmhwqk5BGqQTImEcQgYNwJkhVCbtDT-wi1gb9akI7ex8WiovMIbvpR8LixhJ2ETQvgxgEDJPzKlnD9K-xPGp2GZhaLQXZVpNZaEx2zQFSVGF7IAvxUW4Ld150N6auMdmn6JlDfxggJPLE.Rkpn8EuiMrNdCUcWB-raSbbLbKlZPy1OEgYTeBkzpP8&dib_tag=se&keywords=wolfchan&qid=1760226943&sprefix=wolfchan%2Caps%2C95&sr=8-16-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    
+    <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://hgasupply.com/cdn/shop/files/hga-grave-robber-tee-403161.png?format=jpg&v=1744936619&width=1800" alt="PRODUCT_NAME">
+  <h3>HGA Grave Robber Shirt 2XL</h3>
+  <p class="price">$40.00</p>
+  <button class="view-btn" data-link="https://hgasupply.com/products/hga-grave-robber-tee?pr_prod_strat=e5_desc&pr_rec_id=5f4bde83e&pr_rec_pid=8469021327514&pr_ref_pid=8375577084058&pr_seq=uniform">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://daydrianharding.com/cdn/shop/files/DH-THANKUJESUS-BLACK-TEE-FRONT.png?v=1750445155" alt="PRODUCT_NAME">
+  <h3>DH Thank U Jesus Shirt 2XL</h3>
+  <p class="price">$35.00</p>
+  <button class="view-btn" data-link="https://daydrianharding.com/products/thank-you-jesus-black-tee">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://daydrianharding.com/cdn/shop/products/16753219-8BF5-4A7B-9F6B-A2FDBD646D3E.png?v=1705983629" alt="PRODUCT_NAME">
+  <h3>Stay Sober Wristbands</h3>
+  <p class="price">$10.00</p>
+  <button class="view-btn" data-link="https://daydrianharding.com/products/stay-sober-wristbands">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://daydrianharding.com/cdn/shop/files/vday-hoodie-front.png?v=1737502858" alt="PRODUCT_NAME">
+  <h3>DH Stay Sober Hearts Hoodie 2XL</h3>
+  <p class="price">$55.00</p>
+  <button class="view-btn" data-link="https://daydrianharding.com/products/candy-hearts-hoodie?variant=50964190429397">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://shop.overtime.tv/cdn/shop/files/RWE_001_1d96c582-60b1-462d-946f-abab335f0daa_1024x.jpg?v=1730562908" alt="PRODUCT_NAME">
+  <h3>RWE Shorts 2XL</h3>
+  <p class="price">$49.00</p>
+  <button class="view-btn" data-link="https://shop.overtime.tv/products/rwe-on-top-shorts-black?variant=44416426246305">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://shop.overtime.tv/cdn/shop/files/PIC-CityReapersOTFits-34_1024x.jpg?v=1743017173" alt="PRODUCT_NAME">
+  <h3>City Reapers Shorts 2XL</h3>
+  <p class="price">$49.00</p>
+  <button class="view-btn" data-link="https://shop.overtime.tv/products/city-reapers-feature-mesh-shorts-red?variant=44416427786401">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://perspectivebrand.shop/cdn/shop/files/0B545362-E9A7-439C-B088-8772B555F941.jpg?v=1758518637&width=3840" alt="PRODUCT_NAME">
+  <h3>Prospective Shorts 2XL</h3>
+  <p class="price">$30.00</p>
+  <button class="view-btn" data-link="https://perspectivebrand.shop/products/perspective-black-shorts?variant=50123884921127">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://target.scene7.com/is/image/Target/GUEST_c38f2a91-3dfe-4d60-9fa5-3cb55e673afc?wid=600&hei=600&qlt=80" alt="PRODUCT_NAME">
+  <h3>PSD undies 2XL</h3>
+  <p class="price">$24.00</p>
+  <button class="view-btn" data-link="https://www.target.com/p/psd-men-s-paisley-print-briefs-neon/-/A-94732686?preselect=94643073#lnk=sametab">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+    
+    <!-- Product 7 -->
+    <div class="product" data-category="misc">
+      <img src="https://m.media-amazon.com/images/I/71kRp1fDB2L._AC_SL1500_.jpg" alt="Notebook Set">
+      <h3>16oz Boxing Gloves</h3>
+      <p class="price">$18.99</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Suitable-Kickboxing-Martial-Fighting-Training/dp/B099DXFLPF/ref=sr_1_5?crid=9AJNTNXRG3CM&dib=eyJ2IjoiMSJ9.tzsxvHhY6sC5qZsUY8VHCQK1JV4IG8xRVBJZkZ3GRsmUALG5pJo3vQ1Tvyz_ECpyPqVy_YvPC6prMFckbG-wkcmVYQW-Qf_JtcUmrlhHrGmQ1-DrXRVYxxAl1hrr0ML7TDe9mxqQSo1hGOwHIo8X_2m29XZKXgbzvPEuq_JfLTnXtrAZ5_X8jwSKAiUdZV1L30_vZv50ZVD1luiHc1NKQdwQADZbOegiFRckQc7IcvSDj8MIyUTFK_674Ahx05rf0Rzy2BukORmHSYEclizU1PJWLxIPS2z1V1yl33qsymo.-aJGzyvtl9X5FAktFksVDU01v7sHkU_VfTq2f5MFRjk&dib_tag=se&keywords=16oz%2Bboxing%2Bgloves&qid=1760227193&sprefix=16oz%2Bboxing%2Bgloves%2Caps%2C97&sr=8-5&th=1&psc=1">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+    <!-- Product 8 -->
+    <div class="product" data-category="expensive">
+      <img src="https://m.media-amazon.com/images/I/81Yi8M2vBfL._AC_SL1500_.jpg" alt="Luxury Perfume">
+      <h3>Posca Paint Markers</h3>
+      <p class="price">$29.99</p>
+      <button class="view-btn" data-link="https://www.amazon.com/Markers-Medium-Reversible-Acrylic-Fabric/dp/B001ANVDMU/ref=sr_1_1?crid=3LF3JHACWV57N&dib=eyJ2IjoiMSJ9.Fylxur_Jmk-sldf4AJWxZb04VQCBT9Bmxv2fRB0ZRNCDODMNuGtskb_cK15fV9KPfUEMsAc_YiRCyXmtiyUVaLRq2MOpVwnuLcMYsFq_WFMBjAfkLFmGeihCYBPASoXvkJzfP8TZar-64zT06AtSMoWxzJUaDGgiC8MBaaWJgeoyXvTMdBpLDIwWOaOROniu_0X12WGbGcofEbUG9trYl-EtUa6ItwpYW4-UzKY6mDw90KPnr_fM6vrDY9E-cys-IdGczMiSQS618v2hSfcR5UzaSLo-yhyM2BPze54p-LE.byWv4SAcDsxXHUV8cqUymJXunQ9Qwp2kYlFYoOi_ows&dib_tag=se&keywords=posca%2Bpens&qid=1760227282&sprefix=posca%2Bpens%2Caps%2C110&sr=8-1&th=1">View Item</button>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+  </section>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71f+-s-1dLL._AC_SY300_SX300_QL70_ML2_.jpg" alt="PRODUCT_NAME">
+  <h3>Butterfly Knife Trainer</h3>
+  <p class="price">$9.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/GOOD-WORKER-Butterfly-Trainer-Balisong/dp/B0BYP86GXG/ref=sxin_16_pa_sp_search_thematic_sspa?content-id=amzn1.sym.9ce0d71e-7aca-4397-8822-32313a4aff8e%3Aamzn1.sym.9ce0d71e-7aca-4397-8822-32313a4aff8e&crid=K4S0BCANTL26&cv_ct_cx=butterfly%2Bknife&keywords=butterfly%2Bknife&pd_rd_i=B0BYP86GXG&pd_rd_r=6ec01979-af5d-4ae4-b941-9f8e817387e0&pd_rd_w=13g99&pd_rd_wg=3cZOC&pf_rd_p=9ce0d71e-7aca-4397-8822-32313a4aff8e&pf_rd_r=5H3MSBD0E8XFE14N7X89&qid=1760227553&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=butterfly%2Bknife%2Caps%2C109&sr=1-3-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="expensive" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/81x-R1jA8LL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Basketball Card Pack</h3>
+  <p class="price">$34.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Panini-BK-Mosaic-24-25-Blaster/dp/B0DLHMCXQG/ref=sr_1_7?crid=9M0NXR9C34N7&dib=eyJ2IjoiMSJ9.QaIrmZ74ICnvg0VUE4vKDtYG-hKie_7N-gmwl6gMNGE6nF1X9_jjwiwAGzsIgOF-Ix7G7v8QBW_36QibmBCdXd2gTlicnih7kQiFmG1kQot8xWN6IVot4tQNZijMD3hAT_UV3vpWglj0bWBDQAJxrd6fS1UTex0-FKuYvzm68dvbG7Ddi6VeRP8MSnCQJD9FQxxixTSpMq0S-pSFgFngQlX1j_thqEGrYxZq9UPf7Q-Muziz13xsxBGW1-VLvPdiLb19Jj3lFmXKktvodncHwpThCFpAY35H3dpy-TJgdRw.zK1TOewTeJPexwMWpeIH976t-gGQR2XIJdpDPiqeqwI&dib_tag=se&keywords=nba+cards&qid=1760227810&sprefix=nba+cards%2Caps%2C99&sr=8-7">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+ <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71mr-cnCAiL._AC_SL1416_.jpg" alt="PRODUCT_NAME">
+  <h3>8 Ball Rug 2’</h3>
+  <p class="price">$16.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Cecailin%C2%AE-Aesthetic-Suitable-Bathrooms-Childrens/dp/B0CJXL34YS/ref=sxin_26_sbv_search_btf?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&crid=U7TEGKI1YV40&cv_ct_cx=8%2Bball%2Brug&keywords=8%2Bball%2Brug&pd_rd_i=B0CJXL34YS&pd_rd_r=126fa922-1c97-4b50-b06f-4378fd6a93e8&pd_rd_w=G1ARh&pd_rd_wg=sOWK7&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=MAV7X7JD1SWSVBBRS241&qid=1760817415&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=8%2Bball%2Brug%2Caps%2C93&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/614ccptCpyL._AC_SL1300_.jpg" alt="PRODUCT_NAME">
+  <h3>Flower Rug 2’</h3>
+  <p class="price">$25.03</p>
+  <button class="view-btn" data-link="https://www.amazon.com/PRELETOCH-Bathroom-Non-Slip-Absorbent-Aesthetic/dp/B0D8VQSXQS/ref=sr_1_7?crid=2XI2IL6NYVOF4&dib=eyJ2IjoiMSJ9.QFbe_3SzbbJPMBlAPw5yAQfofipIQsREHYjw4ST_2HTwKGxnjuCNGrUC3KZ3Z4AHJaeyXte8GYAf03ikMoVImOMCpaMHTZjqzuBQNvrzCURNEBSeNTDVyZGiyfA313yK3G6kBWKrguYREjjPRLjODILEShVmnz9ZF30fxZzMkrFwva4hRO6ngItCph-h1kjQnhJtX3Zw2ZIolMadzFxeguOnqH7Jsla7DVmvy8NePVNH8GI8yc7uhcn40dh-vxEsrkciICosajKm3Btr_af8zfsjC1mneCK5xUKIC9IQTIE.t07VrxmACh6SU4JhUXUIYZcgbx4zaFr4BNEi9sjjiNQ&dib_tag=se&keywords=flower%2Bblack%2Brug&qid=1760817684&s=home-garden&sprefix=flower%2Bblack%2Brug%2Cgarden%2C80&sr=1-7&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="expensive" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/812te5A5BmL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Klaws Rug</h3>
+  <p class="price">$71.00</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Rugendary-Hypebeast-Rug-Decorative-Sneakerhead/dp/B0C4HZHLLM/ref=sxin_25_pa_sp_search_thematic_sspa?content-id=amzn1.sym.f3a06935-0d55-4a43-b918-4ea35f8505e5%3Aamzn1.sym.f3a06935-0d55-4a43-b918-4ea35f8505e5&crid=1FWUHJCH1EQ5S&cv_ct_cx=kaws%2Brug&keywords=kaws%2Brug&pd_rd_i=B0C4HZHLLM&pd_rd_r=a5175a0e-3fd7-4e9e-b1b9-ea37f1c71aaa&pd_rd_w=GBkIW&pd_rd_wg=zeZf1&pf_rd_p=f3a06935-0d55-4a43-b918-4ea35f8505e5&pf_rd_r=5RW1AQWN7HQ28WK0HND5&qid=1760817830&s=home-garden&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=klaws%2Brug%2Cgarden%2C71&sr=1-5-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="expensive" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71eHl4i9erL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>GTRacing Gaming Chair</h3>
+  <p class="price">$169.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/GTRACING-Ergonomic-Computer-Headrest-360%C2%B0-Swivel/dp/B0FK4PWJVH/ref=sr_1_9?crid=IXEZ723GARFV&dib=eyJ2IjoiMSJ9.y3X1W72Hc8JMgY999tZdomZN1XbKrgSMmbBXs8oqvJso__FtddYdmmMkdLHG8b7K0u0DB2VuwU0jd2BEhIc6XFj-mpynuhPzfzlmUvS2U6AZI4TG53wl97YJnx4VCdWKq8l9NhYLH-DRU8_E2jww5Z7kU6j7_8cCpJ0GeGzS-X04o-IAlqoVOw96b01U0j46p6-OmCyxBCch6kEh91g3NQUEE3Cc5hRrRWCq3C4gL5lM8lIZwf97to5qeDtgJFNLbAsOlIqC8_B_N6V_QEO_hWzw_mjKKVDtiWf-tI1MoNE.jV65p_WIDNHJjCUzp29MchzDRHqyHWb2WPJIFDG7Zq4&dib_tag=se&keywords=gtracing%2Bchair&qid=1760228068&sprefix=gtracing%2Bchair%2Caps%2C104&sr=8-9&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="books" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71CZ9PE2gSL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Journal</h3>
+  <p class="price">$14.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/MINICAGIE-Vintage-Journaling-Notebook-Journals/dp/B0DF745S1Y/ref=sr_1_8?crid=3B12S8HB4MIMS&dib=eyJ2IjoiMSJ9.IRyzcL_CNQIwzAVZ4-f6e0aAsD3RY41Scj6Za9pNHAWX_DQn_CZQPi3KKaHVVTy3bvS4V7fSfDL_ji9RG9cknweJc2w9I6ho7-h6n3-_LqCooByz5pq2M_jiKvilX20x05YD8WBuIg-i-Mk6bjj2XxroRuvKuSsluxugFG9tRL0UlWKUbDNXF2vvTWxXR5Vg7v0wucj0jkc4zu261EIt_2ESjJ4w3mgTAvuCrQlz7R6pMpK6vv9S7142SNWJlpiG-PzbPp3fT7MZrFSjtQIJqADhuahMHdGJbEQ5X3qoIeA.KBeG9tTmX7HoeEAsEE0f8t94pudaMOJcUkep4sRRhts&dib_tag=se&keywords=black%2Bleather%2Bjournal&qid=1760818933&sprefix=black%2Bleather%2Bjournal%2B%2Caps%2C102&sr=8-8&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="books" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/91HSzl9bxoL._SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Atomic Habits by James Clear</h3>
+  <p class="price">$18.40</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/1847941842/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.HcU0FxujBLfMWVq-P5ilgedp_HvMn_t6z719YlDqri66Ic3ouNZyt6XzISLjVwCRnTQE_TV836rCiU5bslqeFZkK-Q6p8Sf2iMsCNUIbXwxa8mjOTfdZzIKD4-7vQHPrCpLMGTDu8qe-CJdxW9ZZ2O44rCtV_tOJjyRBKGfP5jW55Imp-EDoWD-YWy027nluKlY2z1IEZdfOO9L7Pwi4S6Kyzps9rsvbADDTds3DItc.wSovZRkR6KEIPj4-gx4GkjMV7_15ozh5zIK-0fPGahY&qid=1760228176&sr=8-1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="books" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71OVB8HknWL._SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>12 Rules For Life by Jordan Peterson</h3>
+  <p class="price">$16.00</p>
+  <button class="view-btn" data-link="https://www.amazon.com/12-Rules-Life-Antidote-Chaos/dp/0141988517/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9._IigoceomMP9DaWWyYqht0_MyyLkODO0uq03bDCobAY6OnbnWrwoZ5xGgIWaHOJiYzdhQyD2STXKTM49JbajadGgWhdi9s3HVcFo1s9McSEl6oYom-iAGKJf6WyS7VeZqy5TPuxaTV2uvfVyToETEYTbOlMd3ir5jZiQMr9d_xvDlHlAtga3fe0j43wgOL5qfEFWk6-phn6GBlsr5dvLPRUSQ9fa_Q9kiE2uY-v0Wgo.13jKi_Sth6LNzMMFB76pfsrgck0BLWYksSMY9CL7FiU&qid=1760228285&sr=8-2">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="books" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/81aVaKnJYvL._SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>The Republic by Plato</h3>
+  <p class="price">$14.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Republic-Plato/dp/935856167X/ref=bmx_dp_d_sccl_1_4/141-2292593-2847413?pd_rd_w=Uu8RM&content-id=amzn1.sym.3195bfc3-b6bf-46b2-a410-53224effd4fb&pf_rd_p=3195bfc3-b6bf-46b2-a410-53224effd4fb&pf_rd_r=4MS2BAQAYAV5SFJYA0PR&pd_rd_wg=ijV2A&pd_rd_r=e315a453-cb48-4422-8198-a67bcb74df9b&pd_rd_i=935856167X&psc=1#averageCustomerReviewsAnchor">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  <!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc""books" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/61VAEz2avlL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Kpop PC folder</h3>
+  <p class="price">$7.29</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Photocard-Collector-Pockets-Pendant-Collection/dp/B0B6SVZTPD/ref=sr_1_26?crid=2V3YT6COYHY3O&dib=eyJ2IjoiMSJ9.f-PGghVzuO1jySD4Jsi0rlZnjClEfwy_W9M-gyUUQkcNGHvqcuAUD8RSreHlqtI24pengV3Jlp6-fElh7Lzgbk7eY7-9h8TpAvOv4IoAJ0ehSmWJT0PimKPf8UFnSOS0I5j9-6ThWvrS4rnUNjBfwcDAM2tSU1CDcRRtUUNacZnS4Yo2hyQ0VNHmxeyM8DCeibeYvJdqKRY5wvrik-fyUZbfe4RUg6vky8eElPjJemITL-4NcOMGM56AttCefSulm3YMfeh6dywwG2xEtz4BTnBwfBYJrbQXvPcFf-0_3i4.hYltWjWR6n3IWkEAJL2yE5wPdyhWgrbQwkA2saZ2-nA&dib_tag=se&keywords=kpop%2Bpc%2Bfolder&qid=1760818781&sprefix=kpop%2Bpc%2Bfolder%2Caps%2C98&sr=8-26&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/61TBcBGYHbL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Bunny Phone Stand</h3>
+  <p class="price">$16.69</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Adjustable-OATSBASF-Friendly-Compatible-Tablets/dp/B08Q7Z2FHY/ref=sr_1_1?crid=2NAO6M3D6AR9Q&dib=eyJ2IjoiMSJ9.PKk05ByoCogXlemQXMZMGqnrVBw_EqwFlwIDnZr-jPKVMzTX6gvRqlYKry7iynIN4PpXwa103nkvP2I-dubZ6MOfC4pvWEsoIiYOGvix9MJ2CPQHzhwLmvN4I7JE6Alwqgdr10c1k9GY5Ec4YTl3YR5FuHkGQ3tuQDMompvqHTMLLVQ0pnU3hTFoshFpAZvFmmKm4xwvoIWaFq-sJcG2bcyMRHJt3EZygtUyTDgPlT0.pAEGDem8U-sNyrGHy2rKR1zgACY0AXxHtD42MaVFmcI&dib_tag=se&keywords=bunny%2Bphone%2Bstand&qid=1760228594&s=books&sprefix=bunny%2Bphone%2Bstan%2Cstripbooks%2C79&sr=1-1&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71KCwJMa8gL._SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Coiled USB C Keyboard Cable</h3>
+  <p class="price">$19.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Keyboard-Double-Sleeved-Mechanical-Detachable-Aviator/dp/B09XQ4NJN3/ref=sr_1_5?crid=3B7HFIYYKIFX2&dib=eyJ2IjoiMSJ9.MyziGB4IBsY0K6e4Gy1TLThtBbxNaEGNDA11A8_k8Y034mJF7oYZpROs2aOKHLTT06frz6BDOsvVQcol-B9Oyo_lxuBUOIDpgX3lampSF5CSqcrUuuB9Vs_bnL-8kzD_-kwYqnXM9Pwx-b_4-c7dUKI04lp9jTRNRrr10XAc0gu_Exo_-67gbLWcQ9-ljoaTm6HYtdrWENMaVG0GrqC20xDm0qwbsds5-BlrjHJNsUo.k51L3ubMR4MuuxDm3ZC2ESjKc8mGrPPxpRcXvTQiXhc&dib_tag=se&keywords=coiled%2Bkeyboard%2Bcable%2Btype%2Bc&qid=1760228697&s=books&sprefix=coiled%2Bkeybard%2Bcable%2Btype%2Bc%2Cstripbooks%2C76&sr=1-5&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71eXL-+2w0L._SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Speed Cube Lubricant</h3>
+  <p class="price">$13.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/iYallow-Speed-Cube-Lubricant-High-Performance/dp/B0CQTHJDLL/ref=sr_1_1?crid=3V7ETP15663TE&dib=eyJ2IjoiMSJ9.iZazIcB5waH8pK93PK4GDxMAgv4B0XIfK9ULuIqT-sFmyKNC7S3J_X5ornlf-MoxnbfWrbFdaG7K7wEOTYqMrHl2YLjCPyYepuAEkJfJTfMZNAk8uPGhMBMH0bShRypWhbVQOsTvKBiq7pMv7P81NQlo6A-FMCGLWhuMV1I_L4gp92FfV3fouzjO3bMidjHTWQAP_BxvpGqQZh4tAhgmmyTeYDKDnl8bJxesF_G4zJM.HYW-x5gHzTN43UaH9cuzscmiyH1KuIp_q1EjLpGHVb4&dib_tag=se&keywords=rubix+cube+lube&qid=1760228780&s=books&sprefix=rubix+cube+lube%2Cstripbooks%2C80&sr=1-1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="misc" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71a-Oz1v0yL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Acrylic Paint set</h3>
+  <p class="price">$29.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/dp/B0BS3HWW8F/?_encoding=UTF8&pd_rd_i=B0CD23WWS9&ref_=sbx_be_s_sparkle_ssd_tt&qid=1760228854&pd_rd_w=rcyZL&content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_r=B2PBDVPDTNVJBSXR9Q3F&pd_rd_wg=mWDOU&pd_rd_r=a89f85b3-041e-4b03-8cbe-07db74b6d5e6&pd_rd_plhdr=t&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/51ffowanu5L._AC_SX569_.jpg" alt="PRODUCT_NAME">
+  <h3>Carhartt overalls</h3>
+  <p class="price">$99.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Carhartt-Mens-Rugged-Rigby-Gravel/dp/B075N5GPV9/ref=sr_1_3?dib=eyJ2IjoiMSJ9.NmBAQeb3EpT6asbKOZxUaap98627WAW1qXn5ImScMKHsMAfbbxi5-VucLTfVyYNu9fjm7E64lf81OxcGX4dT_5QkzximsxcneVKQ4IVmBK2ea9Vo3LD2IJK3yoiJZJdKQRsBrkY7TYXP-_VX5NWC14950KVkPZGwyr80H-7FFFVntF4y0N9RdSKp1Ah4_Jk1c0NxFBlwgGzb37baxjmzsZVndbsraTEjjddy3fb7_aASChgXlhAVbn2o8zjXO8ETUAAk6TutP_3cwBVwl-_j555thzmY9v6boDDerRwBx0Q.6eC6DOxqwBlOYjOLwEFbpFbH49NhFuFdueRhH7lhsoA&dib_tag=se&keywords=carhartt+overalls&qid=1760228994&sr=8-3">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="clothes" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/61+aEzkKVkL._AC_SX569_.jpg" alt="PRODUCT_NAME">
+  <h3>Carhartt Cargo Pants</h3>
+  <p class="price">$54.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Carhartt-Rugged-Rigby-Cargo-Shadow/dp/B07KBMGLZJ/ref=sr_1_18?crid=290CI88NIGMHH&dib=eyJ2IjoiMSJ9.uoPjhAnAduIe8PE8kcOo_pEH8SIjuDWiyvn0ea-L-6uiYBDE4W5ByWvVUwJmQ_rxE6LmglBhKRwt-dXudfb0u8xmqabmHcSfSw0_7F4anCJzIUovw3Qh8-oO2rTnsW8-T0QvvYJ7Ia_zrNV-BwSxBImGUyJhWnJodAxAk8RQjN_LnV3KsetplesQMlb4AHCLAjzIfyUfrR-A9RvP-scUiY4jKUSudOQOclgLVM3Bxr3YRBlu3I6LF_q7ZIeXxUyqr5iftUVdJE-rlQD63G9eD1k-u7FBGu8-Vbk-8tWYfQw.nAEFL57yQNbUFRqUDYPiQjfk-3S4m4IJsJNeV6DUMn0&dib_tag=se&keywords=carhartt+pants&qid=1760229074&sprefix=carhartt+pants%2Caps%2C116&sr=8-18">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+ 
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="expensive" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/516aSjDcODL._AC_SL1024_.jpg" alt="PRODUCT_NAME">
+  <h3>Electric Guitar</h3>
+  <p class="price">$146.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Fender-Stratocaster-Electric-Beginner-Warranty/dp/B0CSM4HPJK/ref=sr_1_9?crid=12OLJFUVP9ZF6&dib=eyJ2IjoiMSJ9.-sgRXG1wGNAA33Rj1kOiX3pO4G7J-p6JE5nywJRfZnhu8Egp5sb5bPqTRlNystr-4dgnmnBg2a4ZYlwh_WyEcQX8lPxJMyD9TnoqyHdtUl1rzkx4p4_EDJZRwl09MJeuoOkgSvmax799XSUJwLSz77zefyrf4zexoBUS-Pb-AvijG-8i6_IGaJbSND6Pd6av7R0hykkQ0vY87u4oOgUUSMk0uFCzJUGCDMmPLcLW035pJItoBBvWekrPW2FQ1k2qpcCqDAE4CDDOL4E4fPchf38h6rEZD0LebySXGjfSHQM.bMuW6mIKX4evTIGpeiWlUXROnEPPlcaFWYwD0vTUOes&dib_tag=se&keywords=electric%2Bguitar&qid=1760229829&sprefix=electric%2Bguitar%2Caps%2C108&sr=8-9&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="electronics" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71BmRNeC9mL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Akai MPK mini</h3>
+  <p class="price">$99.00</p>
+  <button class="view-btn" data-link="https://www.amazon.com/AKAI-PROFESSIONAL-MPK-Mini-MK3/dp/B0886KWVYR/ref=sr_1_3?crid=1N1UN5I1T5BUS&dib=eyJ2IjoiMSJ9.244a90vvevo3CukYLCFAH60g_Lays2vRzJPbtSLozAfUe-YFuBWbQy6B8jFt9M9BYvE3i9mTJJZO6phTqPwWz2mXHrNwn8L0ydy26EIWveIeu15hUbjQLon2dgHVlEBebzaJx1QIOyIdAHhDYWvBkhZEDf5eMX_KtbXNXw4XDXR-SjZIeqIng7B2XOVKn7ItFclYc1lCfsRibzcyvy2wTLyqnjPvL_MvX78kXnGjhMtYtke9l-DE1zKtncrQKUuGm4_TZp9zqxeCQ4LZ6t19i9fAdhegaM0V5_M9jI_NQ8g.TtPkT_2bQNOA4TyzuQhdVRbLuirNfEtRh_WvoHIfSik&dib_tag=se&keywords=akai%2Bmpk%2Bmini&qid=1760229894&sprefix=akai%2B%2Caps%2C98&sr=8-3&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="electronics" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/61dQJkzRopL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>HyperX Quadcast Miscrophone</h3>
+  <p class="price">$79.19</p>
+  <button class="view-btn" data-link="https://www.amazon.com/HyperX-QuadCast-Condenser-Microphone-Anti-Vibration/dp/B08G8WH435/ref=sr_1_5?crid=JLZHE9F9IA40&dib=eyJ2IjoiMSJ9.ycZZ8TEoJc7lSzpU_JgjXoc7iphBWbfPKmryy9ejohh79S-1A-oD_kHMAfNaGCreqABq8DvQ3j3h4b1fsbFGLxgFjZlZ9vkSCedt_mmcLmkbLfd9927fnMPzBeSniOtabJWD4eZkEQEf9Qv3B92vuYZ6bhrWztGzGLGHWF1FTFLdloOQnXiScK1CcdEnNdAeCI-lRBokhLM8WeaiA2eOWmXWNInSB2a5CPNR8FRy_ssCzGr4S4LECb8MoMSvtUHaZH93Y0O1hcgt-kCQKEY_vwYpy3t4wjGzKppSHbQQJcU.bz7YYyvjVbXfdFiwf2Tz6xDud4PZkg01R0rC8SbtZTw&dib_tag=se&keywords=hyperx%2Bquadcast&qid=1760229948&sprefix=hyperx%2Bquadcast%2Caps%2C99&sr=8-5&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="electronics" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/618etkLUt9L._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Razer Huntsman Mini</h3>
+  <p class="price">$79.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Razer-Huntsman-Mini-Gaming-Keyboard/dp/B08BFF4C7J/ref=sr_1_3?crid=J083NQDEMFIS&dib=eyJ2IjoiMSJ9.dJgUhRoSzJUNwl09BdVEJTlayotEgDL1vT6XI6RLO_GsTozaj4x4jQhuoow0hIw2v8NL89eDf8nxh2bWhfX3kJJnMyNZ8T9MPZHF1wv-KS1BFicS0JxFXVZ7tj2C_qWTYHkGFwj-Q2w2DfxQr1RDV9l7LCAGsrTaAYEyZC8RWLoH7UUbUbd03kaNaVUnHPteCOruZMrwBfUlt4DJ9ewEBWr1vtjn5zaikzKEId2gGoM.9KA5F_kZnpRjBokhDoeWMQjIWciPPKwulb9MeFK1BRQ&dib_tag=se&keywords=huntsman%2Bmini&qid=1760230067&sprefix=huntsman%2Bmini%2Caps%2C93&sr=8-3&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="electronics" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/81WcXnYjaFL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Acer Nitro 27” monitor</h3>
+  <p class="price">$199.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Acer-Monitor-FreeSync-Premium-M3bmiiprx/dp/B0C4Z8RFY9/ref=sr_1_11?crid=2RGPA104WEUZH&dib=eyJ2IjoiMSJ9.lB7UDG7ytXQhZqNbOTTvpOGKTy85EA5-JiVFQEfSFOjh9bBCl2wgaFba9t0RLgZLdKU7ad9Y5-yU5DlAsi4C3vOw4mrM8QtfujKxdBOjOBu89y9MCkXiFJsEpmVwdciMdt9HJOR_VsPptpWEcZddJgrjTBKP8_iXaKf9upF1hjbU84IdOiZ-MZo6vGjj-1h-vkzPA5fS4LNoojT3jLY4hso14IM0KqkxfVVEIrf1FBo.3KEbcdMCYucKy8ja8k5aHHoZtlTb9ydmRrOHFc0W7sM&dib_tag=se&keywords=monitor+acer&qid=1760230114&sprefix=monitor+acer+%2Caps%2C101&sr=8-11">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="food" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/61z2jtoBrRL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Boba Tea Protein</h3>
+  <p class="price">$44.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Boba-Tea-Protein-Gluten-Free-Lactose-Free/dp/B0CB8ZP191/ref=sr_1_5?crid=TQU32LP4LF06&dib=eyJ2IjoiMSJ9.xJUEbq7gjohP79CUkXvfHvsRSXMRi8wFjXozf7RgZ7lfaOf1zkqZZeqhQQU2sudlHFzwD8Ed3Uxse7W5VQ8mOTrvzBy6eTQQklynyg54CQR2trTwIygSVXiOpA_ArqqMa22gqbdK0T9dzF_lnt7mxHhqtrNzWnPlSwCQ9BkyEw1qKrUtKr2DGiY34bJIHbdEssAGlSbij3rM2FSpPJajJ8QwcRuBQBiPZRxQtmVUB05Ow00-KzNTapelBn1hKDiOV5s24mbtZLmICj8BoFTSkzYHtzbqO5FkNjhisf_G8d8.XkRMqSQ4h_2LJ0BqnrFI2qiw6og48wyTD2zZal7fa0I&dib_tag=se&keywords=protein%2Bpowder%2Bboba%2Btea&qid=1760230245&sprefix=protein%2Bpowder%2Bboba%2Btea%2Caps%2C100&sr=8-5&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="food" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71Yx74zbd+L._SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Buldak Carbonara Buldak Ramen</h3>
+  <p class="price">$6.88</p>
+  <button class="view-btn" data-link="https://www.amazon.com/Samyang-Carbonara-Flavor-Buldak-Ramen/dp/B0DL9BBWSG/ref=sr_1_2?crid=1D4I3BHWBVMGE&dib=eyJ2IjoiMSJ9.zidWkBVdCKC3sXw631ScKNwAuejy_oROhYxb9AcaTxF20gY-b-TK56IYvQR0kXK2nJ9wxVhaVkSTnXYKPorSLvoSRF_w2Epv66bfhx7SrTbsYNvNCvWMqYbJ0S2UlK-_wkVsHvbx-ketFWoypbxTJ2KV2JanAxpggZbA5f9NHwUKbOKLR8cSNB6Hz3ZSdQFGxS0py6bs-QMGe2PjbiUKbTuRF1tg-YtX8XtiEZZ7eOw6yCjj7ulh6MgmD3YJG9yOhr4EjghjtIkEpHhbV8TTjX2U3Eee7_PbNIO8MPymvWc.7deg4TG3jRV17y0kz35Jun66rfQ5TBH_wqFMqNXVxbI&dib_tag=se&keywords=buldak%2Bramen&qid=1760230331&sprefix=buldak%2Bramen%2Caps%2C109&sr=8-2&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<!-- Product Template -->
+<div class="product" data-id="uniqueID" data-category="food" data-price="PRICE">
+  <img src="https://m.media-amazon.com/images/I/71Po-LGJGJL._AC_SL1500_.jpg" alt="PRODUCT_NAME">
+  <h3>Caffine Pouches Peppermint</h3>
+  <p class="price">$35.99</p>
+  <button class="view-btn" data-link="https://www.amazon.com/NZE-Caffeine-Nootropic-Pouches-Variety/dp/B0D726GT76/ref=sr_1_1_sspa?crid=TQT3BQILJWYM&dib=eyJ2IjoiMSJ9.NIHokKlziO6FtASTQG0qyKfuVPfZOlGGYrGAKEXYd7Okm0uXeuM6If9hCv8eyEZEybu3sLHdcv4Me1nD6axtvgjGbL2677jMlNHZrc8YOA0UEK6qZEfVopztSVa24uY-WkW-RnUQBNn_92ByJ0wQsISw69kP9yePMcIpQkaTWD3QWCQMTryc8dZ7dampL8WQo94Bunap5Nxf3gktRetSEoVf3I7UIsCJRu73xQOSqQ3pACyVx0e9bLyoC_Jf9wZFA1oAuLqJv8TK0Lu9pu3UJgTbYb87dSppXTZWevq4N9c.pgNuPlm-MNxwuhyuhrLV0tn5vzCkuqYfbo5_G3gYy30&dib_tag=se&keywords=caffeine%2Bpouches&qid=1760230397&sprefix=caff%2Caps%2C116&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1">View Item</button>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+
+  <!-- CART PANEL -->
+  <div id="cartPanel" class="hidden">
+    <h2>Your Cart</h2>
+    <div id="cartItems" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;"></div>
+    <p id="cartTotal">Total: $0</p>
+    <button id="closeCart">Close</button>
+  </div>
+
+  <!-- HELP POPUP -->
+  <div id="helpPopup" class="hidden">
+    <div class="popup-content">
+      <h2>How to Use This Site 🎅</h2>
+      <ul>
+        <li>Search items using the search bar at the top.</li>
+        <li>Filter items by category using the first dropdown.</li>
+        <li>Filter items by price using the second dropdown.</li>
+        <li>Click "View Item" to visit the store page.</li>
+        <li>Click "Add to Cart" to add items to your cart.</li>
+        <li>Click "Cart" at the top to view your selected items. Remove items with ✖ button.</li>
+      </ul>
+      <button id="closeHelp">Got it</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- SHOPPING LINKS SECTION -->
+<section class="shop-links">
+  <div class="bottom-spacing"></div>
+
+  <h2 class="divider">Shops</h2>
+  <div class="shop-grid">
+    <a href="https://daydrianharding.com" target="_blank" class="shop-item">
+      <img src="https://daydrianharding.com/cdn/shop/files/sharing.png?v=1726601603" alt="Daydrian Harding">
+      <p>Daydrian Harding</p>
+    </a>
+    <a href="https://hgasupply.com/" target="_blank" class="shop-item">
+      <img src="https://whoiskb.com/wp-content/uploads/2020/04/hga-w-logo-m.png" alt="Nike">
+      <p>HGA Supply</p>
+    </a>
+    <a href="https://shop.overtime.tv/collections/rwe-official-apparel?srsltid=AfmBOooDMeOFbLGimuIWJCaBVSbBPqi8B9xb6Ipo0px_Osd2n952sCbM&filter.v.availability=1" target="_blank" class="shop-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqRPezm214vBOjmpHx5XehX5jrNtfgJ6L5Eg&s" alt="Hot Topic">
+      <p>RWE</p>
+    </a>
+  </div>
+</section>
